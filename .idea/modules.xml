@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jlib-progress.iml" filepath="$PROJECT_DIR$/.idea/modules/jlib-progress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jlib-progress_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jlib-progress_main.iml" group="jlib-progress" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jlib-progress_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jlib-progress_test.iml" group="jlib-progress" />
+    </modules>
+  </component>
+</project>
