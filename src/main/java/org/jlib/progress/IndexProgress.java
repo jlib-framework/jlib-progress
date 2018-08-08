@@ -21,12 +21,12 @@
 
 package org.jlib.progress;
 
-public class IndexedProgress {
+public class IndexProgress {
     private final Integer firstIndex;
     private final Integer lastIndex;
     private Integer currentIndex;
 
-    public IndexedProgress(int firstIndex, int lastIndex) {
+    public IndexProgress(int firstIndex, int lastIndex) {
         if (lastIndex < firstIndex)
             throw new IllegalArgumentException(lastIndex + " = lastIndex < firstIndex = " + firstIndex);
 

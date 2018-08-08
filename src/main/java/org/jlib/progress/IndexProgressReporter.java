@@ -25,16 +25,16 @@ import lombok.AllArgsConstructor;
 import lombok.NonNull;
 
 @AllArgsConstructor
-public abstract class IndexedProgressReporter implements ProgressReporter {
+public abstract class IndexProgressReporter implements ProgressReporter {
 
     @NonNull
-    protected IndexedProgress operationProgress;
+    protected IndexProgress operationProgress;
 
-    protected void setOperationProgress(IndexedProgress operationProgress) {
+    protected void setOperationProgress(IndexProgress operationProgress) {
         this.operationProgress = operationProgress;
     }
 
-    public IndexedProgress getOperationProgress() {
+    public IndexProgress getOperationProgress() {
         return operationProgress;
     }
 }

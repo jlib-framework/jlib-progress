@@ -26,7 +26,7 @@ import lombok.NonNull;
 import java.io.PrintStream;
 
 
-public class PrintStreamLineProgressReporter extends IndexedProgressReporter {
+public class PrintStreamLineProgressReporter extends IndexProgressReporter {
     @NonNull
     private final PrintStream outputStream;
     @NonNull
@@ -34,7 +34,7 @@ public class PrintStreamLineProgressReporter extends IndexedProgressReporter {
     @NonNull
     private final String progressItem;
 
-    public PrintStreamLineProgressReporter(IndexedProgress progress, PrintStream outputStream, int maxItemsPerLineCount, String progressItem) {
+    public PrintStreamLineProgressReporter(IndexProgress progress, PrintStream outputStream, int maxItemsPerLineCount, String progressItem) {
         super(progress);
 
         this.outputStream = outputStream;
