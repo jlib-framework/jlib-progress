@@ -144,7 +144,15 @@ signing {
   sign publishing.publications.mavenJava
 }
 
-afterReleaseBuild.dependsOn publishMavenJavaPublicationToStagingRepository
+nexusStaging {
+    packageGroup = "org.jlib"
+
+    username = sonatypeUsername
+    password = sonatypePassword
+}
+
+closeAndReleaseRepository.dependsOn publishMavenJavaPublicationToStagingRepository
+afterReleaseBuild.dependsOn closeAndReleaseRepository
 
 model {
     // optional, for my reference
