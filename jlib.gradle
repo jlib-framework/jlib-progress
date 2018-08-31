@@ -39,6 +39,14 @@ def jlibScmHttpsBaseUrl = 'https://github.com/jlib-framework'
 def jlibWebsiteBaseUrl = 'https://www.jlib.org/'
 def developerName = 'Igor Akkerman'
 
+private boolean isSnapshot() {
+    version.endsWith('-SNAPSHOT')
+}
+
+private boolean isRelease() {
+    !isSnapshot()
+}
+
 repositories {
     mavenCentral()
 }
@@ -151,9 +159,6 @@ nexusStaging {
     password = sonatypePassword
 }
 
-closeAndReleaseRepository.dependsOn publishMavenJavaPublicationToStagingRepository
-afterReleaseBuild.dependsOn closeAndReleaseRepository
-
 model {
     // optional, for my reference
     tasks.generatePomFileForMavenJavaPublication {
@@ -184,10 +189,5 @@ model {
     }
 }
 
-private boolean isSnapshot() {
-    version.endsWith('-SNAPSHOT')
-}
-
-private boolean isRelease() {
-    !isSnapshot()
-}
+closeAndReleaseRepository.dependsOn publishMavenJavaPublicationToStagingRepository
+afterReleaseBuild.dependsOn closeAndReleaseRepository
