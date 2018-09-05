@@ -157,6 +157,9 @@ nexusStaging {
 
     username = sonatypeUsername
     password = sonatypePassword
+
+    numberOfRetries = 3
+    delayBetweenRetriesInMillis = 10000
 }
 
 model {
